@@ -37,6 +37,7 @@ function cargarProductos() {
 function verDetalle(id) {
     const prod = productos.find(p => p.id === id);
     const detalleInfo = document.getElementById('detalle-info');
+    if (!detalleInfo) return; // Seguridad por si el ID cambió
     talleSeleccionado = "";
 
     detalleInfo.innerHTML = `
@@ -45,7 +46,10 @@ function verDetalle(id) {
                 ${prod.imagenes.map(img => `<img src="${img}" class="img-galeria">`).join('')}
             </div>
             <h2 style="text-transform:uppercase;">${prod.nombre}</h2>
-            <p style="font-size:12px; color:#666;"><strong>TELA:</strong> ${prod.tela}</p>
+            
+            <p style="font-size:12px; color:#666; margin-bottom: 2px;"><strong>TELA:</strong> ${prod.tela}</p>
+            <p style="font-size:10px; color:#999; font-style: italic; margin-top: 0;">(Desliza la imagen para ver más detalles)</p>
+            
             <p style="font-size:18px; font-weight:bold;">$${prod.precio.toLocaleString('es-AR')}</p>
             <div class="talles-container">
                 ${prod.talles.map(t => `<button class="talle-btn" onclick="seleccionarTalle(this, '${t}')">${t}</button>`).join('')}
@@ -139,13 +143,16 @@ function cerrarModal(id) {
 function finalizarCompra() {
     if (carrito.length === 0) return alert("El carrito está vacío");
     
-    let texto = "";
+    let texto = "Hola! Quiero realizar un pedido:%0A";
     carrito.forEach(p => {
         texto += `- ${p.nombre} (Talle ${p.talle})%0A`;
     });
     
     const total = document.getElementById('total-precio').innerText;
-    const url = "https://wa.me/543388411810?text=Hola! Quiero realizar un pedido:%0A" + texto + "%0A%0ATOTAL: $" + total;
+    const mensajeFinal = texto + "%0ATOTAL: $" + total;
+    
+    // encodeURI limpia el enlace para que el celular no lo bloquee
+    const url = "https://wa.me/543388411810?text=" + encodeURI(mensajeFinal);
     
     window.location.assign(url);
 }
