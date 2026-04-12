@@ -138,9 +138,15 @@ function cerrarModal(id) {
 
 function finalizarCompra() {
     if (carrito.length === 0) return alert("El carrito está vacío");
+    
     const texto = carrito.map(p => `- ${p.nombre} (Talle ${p.talle})`).join('%0A');
     const total = carrito.reduce((s, p) => s + p.precio, 0);
-    window.location.href(`https://wa.me/543388411810?text=Hola! Quiero realizar un pedido:%0A${texto}%0A%0ATOTAL: $${total}`);
+    
+    // Armamos la URL primero para que sea más limpio
+    const url = `https://wa.me/543388411810?text=Hola! Quiero realizar un pedido:%0A${texto}%0A%0ATOTAL: $${total.toLocaleString('es-AR')}`;
+    
+    // Redirigimos en la misma pestaña
+    window.location.href = url;
 }
 
 window.onclick = (e) => { if (e.target.className === 'modal') e.target.style.display = "none"; }
