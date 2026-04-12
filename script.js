@@ -137,16 +137,18 @@ function cerrarModal(id) {
 }
 
 function finalizarCompra() {
-    if (carrito.length === 0) {
-        alert("El carrito está vacío");
-        return;
-    }
+    if (carrito.length === 0) return alert("El carrito está vacío");
     
-    const texto = carrito.map(p => `- ${p.nombre} (Talle ${p.talle})`).join('%0A');
-    const total = carrito.reduce((s, p) => s + p.precio, 0);
-    const mensaje = `https://wa.me/543388411810?text=Hola! Quiero realizar un pedido:%0A${texto}%0A%0ATOTAL: $${total.toLocaleString('es-AR')}`;
+    let texto = "";
+    carrito.forEach(p => {
+        texto += `- ${p.nombre} (Talle ${p.talle})%0A`;
+    });
     
-    window.location.href = mensaje;
+    const total = document.getElementById('total-precio').innerText;
+    const url = "https://wa.me/543388411810?text=Hola! Quiero realizar un pedido:%0A" + texto + "%0A%0ATOTAL: $" + total;
+    
+    window.location.assign(url);
+}
 }
 window.onclick = (e) => { if (e.target.className === 'modal') e.target.style.display = "none"; }
 window.onload = cargarProductos;
