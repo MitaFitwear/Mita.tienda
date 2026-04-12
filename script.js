@@ -3,7 +3,7 @@ const productos = [
     { id: 2, nombre: "Catsuit Hero", precio: 21800, imagenes: ["img/catsuit.png", "img/catsuitdetalles.png"], tela: "lycra. Desliza para más info.", talles: ["S", "L"] },
     { id: 3, nombre: "Calza Recta Linear", precio: 17690, imagenes: ["img/calzarectalinear.png", "img/calzarectalineardetalles.png"], tela: "lycra costura reforzada. Desliza para más info.", talles: ["2", "3","4"] },
     { id: 4, nombre: "Buzo Reset Beige", precio: 17589, imagenes: ["img/buzoresetbeige.png", "img/buzoresetdetalles.png"], tela: "Lanilla soft. Desliza para más info", talles: [3] },
-    { id: 5, nombre: "Térmica black", precio: 14868, imagenes: ["img/termicablack.png", "img/termicadetalles.png"], tela: "algodón. Desliza para más info.", talles: ["2"] },
+    { id: 5, nombre: "Térmica black", precio: 14868, imagenes: ["img/termicablack.png", "img/termicadetalles.png"], tela: "algodón. Cuello redondo. Desliza para más info.", talles: ["2"] },
     { id: 6, nombre: "Buzo Reset Black", precio: 17589, imagenes: ["img/buzoresetblack.png", "img/buzoresetdetalles.png"], tela: "Lanilla soft. Desliza para más info.", talles: ["3"] },
     { id: 7, nombre: "Palazzo Nan", precio: 26320, imagenes: ["img/pantalonNan.png", "img/pantalonNandetalles.png"], tela: "Algodón frizado. Desliza para más info.", talles: ["L"] },
     { id: 8, nombre: "Short Pollera Pulse", precio: 17569, imagenes: ["img/shortpollerapulse.png", "img/shortpolleradetalles.png"], tela: "Lycra costura reforzada. Desliza para más info.", talles: ["1", "2"] },
@@ -15,8 +15,8 @@ const productos = [
     { id: 14, nombre: "Palazzo storm", precio: 17560, imagenes: ["img/palazzostorm.png", "img/palazzostormdetalles.png"], tela: "Waffle frizado. Desliza para más info.", talles: ["talle único"] },
     { id: 15, nombre: "Pantalón c/puño White", precio: 26320, imagenes: ["img/pantalonpuñowhite.png", "img/pantalonpuñodetalles.png"], tela: "Rustico frizado. Desliza para más info.", talles: ["único"] },
     { id: 16, nombre: "Top sand", precio: 13800, imagenes: ["img/topsand.png", "img/topsanddetalles.png"], tela: "Modal y algodón. Desliza para más info.", talles: ["único"] },
-    { id: 17, nombre: "Manga corta ink", precio: 13520, imagenes: ["img/mangacortaink.png", "img/mangacortainkdetalles.png"], tela: "Modal y algodón. Desliza para más info.", talles: ["talle único"] },
-    { id: 18, nombre: "Manga corta nude", precio: 13520, imagenes: ["img/mangacortanude.png", "img/mangacortanudedetalles.png"], tela: "Modal y algodón. Desliza para más info.", talles: ["talle único"] }
+    { id: 17, nombre: "Manga corta ink", precio: 13520, imagenes: ["img/mangacortaink.png", "img/mangacortainkdetalles.png"], tela: "Modal y algodón. Cuello redondo. Desliza para más info.", talles: ["talle único"] },
+    { id: 18, nombre: "Manga corta nude", precio: 13520, imagenes: ["img/mangacortanude.png", "img/mangacortanudedetalles.png"], tela: "Modal y algodón. Cuello redondo. Desliza para más info.", talles: ["talle único"] }
 ];
 
 let carrito = [];
