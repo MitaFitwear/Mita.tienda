@@ -140,19 +140,20 @@ function cerrarModal(id) {
     const m = document.getElementById(id);
     if(m) m.style.display = 'none';
 }
-
 function finalizarCompra() {
     if (carrito.length === 0) return alert("El carrito está vacío");
     
-    let texto = "Hola! Quiero realizar un pedido:%0A";
+    // Usamos saltos de línea reales (\n) para que el navegador los entienda mejor
+    let texto = "Hola! Quiero realizar un pedido:\n";
     carrito.forEach(p => {
-        texto += `- ${p.nombre} (Talle ${p.talle})%0A`;
+        texto += `- ${p.nombre} (Talle ${p.talle})\n`;
     });
     
     const total = document.getElementById('total-precio').innerText;
-    const mensajeFinal = texto + "%0ATOTAL: $" + total;
+    const mensajeFinal = `${texto}\nTOTAL: $${total}`;
     
-    const url = "https://wa.me/543388411810?text=" + encodeURI(mensajeFinal);
+    // encodeURIComponent es más preciso para los saltos de línea en móviles
+    const url = "https://wa.me/543388411810?text=" + encodeURIComponent(mensajeFinal);
     
     window.location.assign(url);
 }
