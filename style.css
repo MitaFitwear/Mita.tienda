@@ -1,0 +1,271 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Helvetica', sans-serif; 
+}
+
+body { 
+    background: #efefed; 
+    color: #575245; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+/* NAVBAR Y LOGO */
+.mensaje-bienvenida { 
+    background: #575245; 
+    color: #efefed; 
+    text-align: center; 
+    padding: 10px; 
+    font-size: 10px; 
+    letter-spacing: 2px; 
+}
+
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 5%; 
+    background: #efefed; 
+    border-bottom: 1px solid #eee; 
+}
+
+.logo img { 
+    height: 80px; /* Ajustado para que no ocupe tanto en móvil */
+    width: auto; 
+}
+
+.menu { 
+    list-style: none; 
+    font-weight: bold; 
+    cursor: pointer; 
+    font-size: 13px; 
+}
+
+/* GRILLA DE PRODUCTOS */
+.contenedor { 
+    flex: 1; 
+    padding: 20px 5%; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    width: 100%; 
+}
+
+/* Cambio aquí: Seleccionamos por ID o Clase según tu HTML */
+#productos-grid, .productos-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+}
+
+.tarjeta { 
+    background: #fff; 
+    padding: 8px; 
+    text-align: center; 
+    border: 1px solid #eee; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* CORRECCIÓN DE FOTOS EN GRILLA */
+.tarjeta img { 
+    width: 100%; 
+    aspect-ratio: 12/ 13; /* Mantiene la forma vertical sin importar el dispositivo */
+    object-fit: contain; 
+    object-position: center top;
+    cursor: pointer; 
+    border-radius: 4px;
+}
+
+.tarjeta h3 { 
+    font-size: 11px; 
+    margin: 5px 0 2px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+/* BOTÓN FLOTANTE WA */
+.btn-flotante-wa { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    width: 60px; 
+    height: 60px; 
+    background: #25d366; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+    z-index: 9999; 
+}
+
+.btn-flotante-wa img { width: 35px; }
+
+/* MODALES */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 10000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.7); 
+    backdrop-filter: blur(4px); 
+    overflow-y: auto; 
+}
+
+.modal-contenido, .modal-contenido-legal, .modal-contenido-detalle { 
+    background: #fff; 
+    margin: 5% auto; /* Bajé el margen para que se vea más arriba en cel */
+    padding: 20px; 
+    width: 95%; 
+    max-width: 450px; 
+    border-radius: 4px; 
+    position: relative; 
+}
+
+/* GALERÍA DESLIZABLE (CORREGIDA) */
+.galeria-detalles {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0;
+    margin-bottom: 15px;
+    scrollbar-width: none;
+}
+
+.galeria-detalles::-webkit-scrollbar { display: none; }
+
+.img-galeria {
+    min-width: 100%;
+    height: auto;
+    max-height: 65vh; /* Evita que la foto sea más larga que la pantalla */
+    scroll-snap-align: center;
+    border-radius: 4px;
+    object-fit: contain; /* Asegura que la prenda se vea COMPLETA */
+    background: #f9f9f9;
+}
+
+/* DETALLES Y TALLES */
+.talles-container { 
+    display: flex; 
+    gap: 8px; 
+    margin: 15px 0; 
+    justify-content: center; 
+    flex-wrap: wrap; /* Para que no se amontonen si son muchos talles */
+}
+
+.talle-btn { 
+    border: 1px solid #ccc; 
+    padding: 8px 12px; 
+    cursor: pointer; 
+    background: #fff; 
+    font-size: 12px;
+}
+
+.talle-btn.active { 
+    background: #575245; 
+    color: #fff; 
+    border-color: #575245; 
+}
+
+.btn-confirmar { 
+    background: #575245; 
+    color: #fff; 
+    border: none; 
+    width: 100%; 
+    padding: 15px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+.pie-pagina { 
+    width: 100%; 
+    background: #fff; 
+    padding: 30px 0; 
+    text-align: center; 
+    border-top: 1px solid #eee; 
+    margin-top: auto; 
+}
+
+.link-legal { 
+    cursor: pointer; 
+    text-decoration: underline; 
+    font-size: 9px; 
+    color: #aaa; 
+}
+
+.cerrar { 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 25px; 
+    cursor: pointer; 
+    color: #aaa; 
+    z-index: 10;
+}
+
+/* AJUSTES ESPECÍFICOS PARA MÓVIL */
+@media (max-width: 600px) {
+    .navbar { padding: 10px 5%; }
+    .logo img { height: 60px; }
+    
+    #productos-grid, .productos-grid { 
+        gap: 10px; 
+    }
+    
+    .tarjeta { padding: 8px; }
+    
+    .tarjeta h3 { font-size: 10px; }
+    
+    .modal-contenido-detalle {
+        margin: 2% auto;
+        padding: 15px;
+    }
+}
+/* BOTÓN FINALIZAR COMPRA (VERDE WHATSAPP) */
+.btn-whatsapp-final { 
+    background: #25d366; 
+    color: #fff; 
+    border: none; 
+    width: 100%; 
+    padding: 15px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-top: 15px; 
+    text-transform: uppercase;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.btn-whatsapp-final:hover {
+    background: #1ebe57; /* Un verde un poquito más oscuro al pasar el mouse */
+}/* BOTÓN VACIAR CARRITO */
+.btn-vaciar {
+    background-color: #d1d1d1; /* Un gris claro elegante */
+    color: #575245; /* El color de tu marca para el texto */
+    border: none;
+    padding: 10px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+    width: auto; /* Para que no ocupe todo el ancho como el de finalizar compra */
+}
+
+.btn-vaciar:hover {
+    background-color: #b0ada3; /* Se oscurece un poquito al pasar el mouse */
+    color: #fff;
+}

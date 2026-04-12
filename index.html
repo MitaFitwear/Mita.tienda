@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mita.fitwear | Catálogo Oficial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mensaje-bienvenida">ENVÍOS A TODO EL PAÍS DESDE CÓRDOBA CAPITAL</div>
+
+    <nav class="navbar">
+        <div class="logo"><img src="img/logo.png.png" alt="Mita.fitwear"></div>
+        <ul class="menu">
+            <li onclick="abrirModal('carrito')" style="cursor:pointer;">CARRITO (<span id="contador-carrito">0</span>)</li>
+        </ul>
+    </nav>
+
+    <main class="contenedor">
+        <h1 class="titulo-seccion">NUESTRA COLECCIÓN</h1>
+        <div class="productos-grid" id="productos-grid"></div>
+    </main>
+
+    <a href="https://wa.me/543388411810" class="btn-flotante-wa" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 MITA.FITWEAR — CÓRDOBA, ARGENTINA</p>
+        <p style="margin-top: 15px;">
+            <span class="link-legal" onclick="abrirModal('legales')" style="cursor:pointer;">TÉRMINOS Y CONDICIONES</span>
+        </p>
+    </footer>
+
+    <div id="modal-detalle" class="modal">
+        <div class="modal-contenido-detalle">
+            <span class="cerrar" onclick="cerrarModal('modal-detalle')">&times;</span>
+            <div id="detalle-info"></div>
+        </div>
+    </div>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modal-carrito')">&times;</span>
+            <h2 class="titulo-modal">TU CARRITO</h2>
+            
+            <ul id="lista-carrito" style="list-style: none; padding: 0;"></ul>
+
+            <div id="carrito-footer">
+                <p class="total">TOTAL: $<span id="total-precio">0</span></p>
+                <button class="btn-whatsapp-final" onclick="finalizarCompra()">FINALIZAR POR WHATSAPP</button>
+                <button class="btn-vaciar" onclick="vaciarCarrito()">VACIAR CARRITO</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-legales" class="modal">
+        <div class="modal-contenido-legal">
+            <span class="cerrar" onclick="cerrarModal('modal-legales')">&times;</span>
+            <h2 class="titulo-legal">Términos y Condiciones</h2>
+            <div class="texto-legal">
+                <p><strong>1. Pedidos:</strong> Catálogo digital. La compra se finaliza vía WhatsApp.</p>
+                <p><strong>2. Envíos:</strong> Desde Córdoba Capital a todo el país.</p>
+                <p><strong>3. Cambios:</strong> 15 días con etiqueta y prenda original.</p>
+            </div>
+            <button class="btn-entendido" onclick="cerrarModal('modal-legales')">ENTENDIDO</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
