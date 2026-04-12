@@ -156,6 +156,5 @@ function finalizarCompra() {
     
     window.location.assign(url);
 }
-}
 window.onclick = (e) => { if (e.target.className === 'modal') e.target.style.display = "none"; }
 window.onload = cargarProductos;
