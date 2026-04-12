@@ -1,26 +1,27 @@
 const productos = [
-    { id: 1, nombre: "Short lycra Aura", precio: 13200, imagenes: ["img/shortlycra.png", "img/shortlycradetalles.png"], tela: "Lycra costura reforzada. Desliza para más info.", talles: ["2", "3", "4"] },
-    { id: 2, nombre: "Catsuit Hero", precio: 21800, imagenes: ["img/catsuit.png", "img/catsuitdetalles.png"], tela: "lycra. Desliza para más info.", talles: ["S", "L"] },
-    { id: 3, nombre: "Calza Recta Linear", precio: 17690, imagenes: ["img/calzarectalinear.png", "img/calzarectalineardetalles.png"], tela: "lycra costura reforzada. Desliza para más info.", talles: ["2", "3","4"] },
-    { id: 4, nombre: "Buzo Reset Beige", precio: 17589, imagenes: ["img/buzoresetbeige.png", "img/buzoresetdetalles.png"], tela: "Lanilla soft. Desliza para más info", talles: [3] },
-    { id: 5, nombre: "Térmica black", precio: 14868, imagenes: ["img/termicablack.png", "img/termicadetalles.png"], tela: "algodón. Cuello redondo. Desliza para más info.", talles: ["2"] },
-    { id: 6, nombre: "Buzo Reset Black", precio: 17589, imagenes: ["img/buzoresetblack.png", "img/buzoresetdetalles.png"], tela: "Lanilla soft. Desliza para más info.", talles: ["3"] },
-    { id: 7, nombre: "Palazzo Nan", precio: 26320, imagenes: ["img/pantalonNan.png", "img/pantalonNandetalles.png"], tela: "Algodón frizado. Desliza para más info.", talles: ["L"] },
-    { id: 8, nombre: "Short Pollera Pulse", precio: 17569, imagenes: ["img/shortpollerapulse.png", "img/shortpolleradetalles.png"], tela: "Lycra costura reforzada. Desliza para más info.", talles: ["1", "2"] },
-    { id: 9, nombre: "Top Ju", precio: 13248, imagenes: ["img/topJu.png", "img/topJudetalles.png"], tela: "Lycra. Desliza para más info.", talles: ["1", "5"] },
-    { id: 10, nombre: "Top Aura", precio: 12520, imagenes: ["img/topaura.png", "img/topauaradetalles.png"], tela: "Lycra costura reforzada. Desliza para más info.", talles: ["1", "2", "3","4", "5"] },
-    { id: 11, nombre: "Top Core", precio: 12780, imagenes: ["img/topcore.png", "img/topcoredetalles.png"], tela: "Lycra. Desliza para más info.", talles: ["2",] },
-    { id: 12, nombre: "Polera Bruma", precio: 13520, imagenes: ["img/polerablancabruma.png", "img/polerablancadetalles.png"], tela: "Algodón. Desliza para más info.", talles: ["talle único"] },
-    { id: 13, nombre: "Polera Unit", precio: 13520, imagenes: ["img/poleragrisunit.png", "img/poleragrisunitdetalles.png"], tela: "Algodón. Desliza para más info.", talles: ["talle único"] },
-    { id: 14, nombre: "Palazzo storm", precio: 17560, imagenes: ["img/palazzostorm.png", "img/palazzostormdetalles.png"], tela: "Waffle frizado. Desliza para más info.", talles: ["talle único"] },
-    { id: 15, nombre: "Pantalón c/puño White", precio: 26320, imagenes: ["img/pantalonpuñowhite.png", "img/pantalonpuñodetalles.png"], tela: "Rustico frizado. Desliza para más info.", talles: ["único"] },
-    { id: 16, nombre: "Top sand", precio: 13800, imagenes: ["img/topsand.png", "img/topsanddetalles.png"], tela: "Modal y algodón. Desliza para más info.", talles: ["único"] },
-    { id: 17, nombre: "Manga corta ink", precio: 13520, imagenes: ["img/mangacortaink.png", "img/mangacortainkdetalles.png"], tela: "Modal y algodón. Cuello redondo. Desliza para más info.", talles: ["talle único"] },
-    { id: 18, nombre: "Manga corta nude", precio: 13520, imagenes: ["img/mangacortanude.png", "img/mangacortanudedetalles.png"], tela: "Modal y algodón. Cuello redondo. Desliza para más info.", talles: ["talle único"] }
+    { id: 1, nombre: "Short lycra Aura", precio: 13200, imagenes: ["img/shortlycra.png", "img/shortlycradetalles.png"], tela: "Lycra costura reforzada.", talles: ["2", "3", "4"] },
+    { id: 2, nombre: "Catsuit Hero", precio: 21800, imagenes: ["img/catsuit.png", "img/catsuitdetalles.png"], tela: "Lycra.", talles: ["S", "L"] },
+    { id: 3, nombre: "Calza Recta Linear", precio: 17690, imagenes: ["img/calzarectalinear.png", "img/calzarectalineardetalles.png"], tela: "Lycra costura reforzada.", talles: ["2", "3","4"] },
+    { id: 4, nombre: "Buzo Reset Beige", precio: 17589, imagenes: ["img/buzoresetbeige.png", "img/buzoresetdetalles.png"], tela: "Lanilla soft.", talles: [3] },
+    { id: 5, nombre: "Térmica black", precio: 14868, imagenes: ["img/termicablack.png", "img/termicadetalles.png"], tela: "Algodón. Cuello redondo.", talles: ["2"] },
+    { id: 6, nombre: "Buzo Reset Black", precio: 17589, imagenes: ["img/buzoresetblack.png", "img/buzoresetdetalles.png"], tela: "Lanilla soft.", talles: ["3"] },
+    { id: 7, nombre: "Palazzo Nan", precio: 26320, imagenes: ["img/pantalonNan.png", "img/pantalonNandetalles.png"], tela: "Algodón frizado.", talles: ["L"] },
+    { id: 8, nombre: "Short Pollera Pulse", precio: 17569, imagenes: ["img/shortpollerapulse.png", "img/shortpolleradetalles.png"], tela: "Lycra costura reforzada.", talles: ["1", "2"] },
+    { id: 9, nombre: "Top Ju", precio: 13248, imagenes: ["img/topJu.png", "img/topJudetalles.png"], tela: "Lycra.", talles: ["1", "5"] },
+    { id: 10, nombre: "Top Aura", precio: 12520, imagenes: ["img/topaura.png", "img/topauaradetalles.png"], tela: "Lycra costura reforzada.", talles: ["1", "2", "3","4", "5"] },
+    { id: 11, nombre: "Top Core", precio: 12780, imagenes: ["img/topcore.png", "img/topcoredetalles.png"], tela: "Lycra.", talles: ["2"] },
+    { id: 12, nombre: "Polera Bruma", precio: 13520, imagenes: ["img/polerablancabruma.png", "img/polerablancadetalles.png"], tela: "Algodón.", talles: ["talle único"] },
+    { id: 13, nombre: "Polera Unit", precio: 13520, imagenes: ["img/poleragrisunit.png", "img/poleragrisunitdetalles.png"], tela: "Algodón.", talles: ["talle único"] },
+    { id: 14, nombre: "Palazzo storm", precio: 17560, imagenes: ["img/palazzostorm.png", "img/palazzostormdetalles.png"], tela: "Waffle frizado.", talles: ["talle único"] },
+    { id: 15, nombre: "Pantalón c/puño White", precio: 26320, imagenes: ["img/pantalonpuñowhite.png", "img/pantalonpuñodetalles.png"], tela: "Rustico frizado.", talles: ["único"] },
+    { id: 16, nombre: "Top sand", precio: 13800, imagenes: ["img/topsand.png", "img/topsanddetalles.png"], tela: "Modal y algodón.", talles: ["único"] },
+    { id: 17, nombre: "Manga corta ink", precio: 13520, imagenes: ["img/mangacortaink.png", "img/mangacortainkdetalles.png"], tela: "Modal y algodón. Cuello redondo.", talles: ["talle único"] },
+    { id: 18, nombre: "Manga corta nude", precio: 13520, imagenes: ["img/mangacortanude.png", "img/mangacortanudedetalles.png"], tela: "Modal y algodón. Cuello redondo.", talles: ["talle único"] }
 ];
 
 let carrito = [];
 let talleSeleccionado = "";
+
 function cargarProductos() {
     const grid = document.getElementById('productos-grid');
     if (!grid) return;
@@ -37,7 +38,7 @@ function cargarProductos() {
 function verDetalle(id) {
     const prod = productos.find(p => p.id === id);
     const detalleInfo = document.getElementById('detalle-info');
-    if (!detalleInfo) return; // Seguridad por si el ID cambió
+    if (!detalleInfo) return;
     talleSeleccionado = "";
 
     detalleInfo.innerHTML = `
@@ -151,10 +152,18 @@ function finalizarCompra() {
     const total = document.getElementById('total-precio').innerText;
     const mensajeFinal = texto + "%0ATOTAL: $" + total;
     
-    // encodeURI limpia el enlace para que el celular no lo bloquee
     const url = "https://wa.me/543388411810?text=" + encodeURI(mensajeFinal);
     
     window.location.assign(url);
 }
-window.onclick = (e) => { if (e.target.className === 'modal') e.target.style.display = "none"; }
-window.onload = cargarProductos;
+
+// Eventos de interacción
+window.onclick = (e) => { 
+    if (e.target.classList.contains('modal')) {
+        e.target.style.display = "none"; 
+    }
+}
+
+window.onload = () => {
+    cargarProductos();
+};
