@@ -33,7 +33,7 @@ body {
 }
 
 .logo img { 
-    height: 80px; /* Ajustado para que no ocupe tanto en móvil */
+    height: 80px; 
     width: auto; 
 }
 
@@ -53,7 +53,6 @@ body {
     width: 100%; 
 }
 
-/* Cambio aquí: Seleccionamos por ID o Clase según tu HTML */
 #productos-grid, .productos-grid { 
     display: grid; 
     grid-template-columns: repeat(2, 1fr); 
@@ -69,10 +68,9 @@ body {
     flex-direction: column;
 }
 
-/* CORRECCIÓN DE FOTOS EN GRILLA */
 .tarjeta img { 
     width: 100%; 
-    aspect-ratio: 12/ 13; /* Mantiene la forma vertical sin importar el dispositivo */
+    aspect-ratio: 12 / 13; 
     object-fit: contain; 
     object-position: center top;
     cursor: pointer; 
@@ -84,6 +82,38 @@ body {
     margin: 5px 0 2px; 
     text-transform: uppercase; 
     letter-spacing: 1px;
+}
+
+/* --- ESTILOS DEL SLIDER (PUNTOS Y TEXTO) --- */
+.slider-dots {
+    text-align: center;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    background-color: #d1d1d1;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #575245; /* Color de tu marca */
+}
+
+.text-desliza {
+    font-size: 9px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
 }
 
 /* BOTÓN FLOTANTE WA */
@@ -120,7 +150,7 @@ body {
 
 .modal-contenido, .modal-contenido-legal, .modal-contenido-detalle { 
     background: #fff; 
-    margin: 5% auto; /* Bajé el margen para que se vea más arriba en cel */
+    margin: 5% auto; 
     padding: 20px; 
     width: 95%; 
     max-width: 450px; 
@@ -128,14 +158,14 @@ body {
     position: relative; 
 }
 
-/* GALERÍA DESLIZABLE (CORREGIDA) */
+/* GALERÍA DESLIZABLE EN MODAL */
 .galeria-detalles {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 0;
-    margin-bottom: 15px;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .galeria-detalles::-webkit-scrollbar { display: none; }
@@ -143,10 +173,10 @@ body {
 .img-galeria {
     min-width: 100%;
     height: auto;
-    max-height: 65vh; /* Evita que la foto sea más larga que la pantalla */
-    scroll-snap-align: center;
+    max-height: 65vh; 
+    scroll-snap-align: start;
     border-radius: 4px;
-    object-fit: contain; /* Asegura que la prenda se vea COMPLETA */
+    object-fit: contain; 
     background: #f9f9f9;
 }
 
@@ -156,7 +186,7 @@ body {
     gap: 8px; 
     margin: 15px 0; 
     justify-content: center; 
-    flex-wrap: wrap; /* Para que no se amontonen si son muchos talles */
+    flex-wrap: wrap; 
 }
 
 .talle-btn { 
@@ -212,7 +242,7 @@ body {
     z-index: 10;
 }
 
-/* AJUSTES ESPECÍFICOS PARA MÓVIL */
+/* AJUSTES MÓVIL */
 @media (max-width: 600px) {
     .navbar { padding: 10px 5%; }
     .logo img { height: 60px; }
@@ -222,7 +252,6 @@ body {
     }
     
     .tarjeta { padding: 8px; }
-    
     .tarjeta h3 { font-size: 10px; }
     
     .modal-contenido-detalle {
@@ -230,7 +259,8 @@ body {
         padding: 15px;
     }
 }
-/* BOTÓN FINALIZAR COMPRA (VERDE WHATSAPP) */
+
+/* BOTONES FINALES */
 .btn-whatsapp-final { 
     background: #25d366; 
     color: #fff; 
@@ -246,12 +276,11 @@ body {
     display: block;
 }
 
-.btn-whatsapp-final:hover {
-    background: #1ebe57; /* Un verde un poquito más oscuro al pasar el mouse */
-}/* BOTÓN VACIAR CARRITO */
+.btn-whatsapp-final:hover { background: #1ebe57; }
+
 .btn-vaciar {
-    background-color: #d1d1d1; /* Un gris claro elegante */
-    color: #575245; /* El color de tu marca para el texto */
+    background-color: #d1d1d1; 
+    color: #575245; 
     border: none;
     padding: 10px 15px;
     font-size: 11px;
@@ -262,10 +291,10 @@ body {
     border-radius: 4px;
     margin-top: 10px;
     transition: background 0.3s ease;
-    width: auto; /* Para que no ocupe todo el ancho como el de finalizar compra */
+    width: auto; 
 }
 
 .btn-vaciar:hover {
-    background-color: #b0ada3; /* Se oscurece un poquito al pasar el mouse */
+    background-color: #b0ada3; 
     color: #fff;
 }
