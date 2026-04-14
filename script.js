@@ -43,13 +43,18 @@ function verDetalle(id) {
 
     detalleInfo.innerHTML = `
         <div class="detalle-flex">
-            <div class="galeria-detalles">
+            <div class="galeria-detalles" onscroll="actualizarPuntos(this)">
                 ${prod.imagenes.map(img => `<img src="${img}" class="img-galeria">`).join('')}
             </div>
-            <h2 style="text-transform:uppercase;">${prod.nombre}</h2>
             
+            <div class="slider-dots">
+                ${prod.imagenes.map((_, index) => `<span class="dot ${index === 0 ? 'active' : ''}"></span>`).join('')}
+            </div>
+
+            <p class="text-desliza">desliza</p>
+
+            <h2 style="text-transform:uppercase; margin-top:10px;">${prod.nombre}</h2>
             <p style="font-size:12px; color:#666; margin-bottom: 2px;"><strong>TELA:</strong> ${prod.tela}</p>
-            <p style="font-size:10px; color:#999; font-style: italic; margin-top: 0;">(Desliza la imagen para ver más detalles)</p>
             
             <p style="font-size:18px; font-weight:bold;">$${prod.precio.toLocaleString('es-AR')}</p>
             <div class="talles-container">
@@ -59,6 +64,18 @@ function verDetalle(id) {
         </div>
     `;
     abrirModal('detalle');
+}
+
+// Nueva función para que los puntos cambien al deslizar
+function actualizarPuntos(contenedor) {
+    const dots = contenedor.parentElement.querySelectorAll('.dot');
+    const width = contenedor.offsetWidth;
+    const scrollLeft = contenedor.scrollLeft;
+    const index = Math.round(scrollLeft / width);
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
 }
 
 function seleccionarTalle(btn, talle) {
@@ -140,10 +157,10 @@ function cerrarModal(id) {
     const m = document.getElementById(id);
     if(m) m.style.display = 'none';
 }
+
 function finalizarCompra() {
     if (carrito.length === 0) return alert("El carrito está vacío");
     
-    // Usamos saltos de línea reales (\n) para que el navegador los entienda mejor
     let texto = "Hola! Quiero realizar un pedido:\n";
     carrito.forEach(p => {
         texto += `- ${p.nombre} (Talle ${p.talle})\n`;
@@ -152,13 +169,11 @@ function finalizarCompra() {
     const total = document.getElementById('total-precio').innerText;
     const mensajeFinal = `${texto}\nTOTAL: $${total}`;
     
-    // encodeURIComponent es más preciso para los saltos de línea en móviles
     const url = "https://wa.me/543388411810?text=" + encodeURIComponent(mensajeFinal);
     
     window.location.assign(url);
 }
 
-// Eventos de interacción
 window.onclick = (e) => { 
     if (e.target.classList.contains('modal')) {
         e.target.style.display = "none"; 
