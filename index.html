@@ -17,7 +17,7 @@
     </nav>
 
     <main class="contenedor">
-        <h1 class="titulo-seccion">NUESTRA COLECCIÓN</h1>
+        <h1 class="titulo-seccion" style="text-align: center; font-size: 14px; letter-spacing: 3px; margin-bottom: 20px; color: #575245;">NUESTRA COLECCIÓN</h1>
         <div class="productos-grid" id="productos-grid"></div>
     </main>
 
@@ -35,19 +35,22 @@
     <div id="modal-detalle" class="modal">
         <div class="modal-contenido-detalle">
             <span class="cerrar" onclick="cerrarModal('modal-detalle')">&times;</span>
-            <div id="detalle-info"></div>
+            <div id="detalle-info">
+                </div>
         </div>
     </div>
 
     <div id="modal-carrito" class="modal">
         <div class="modal-contenido">
             <span class="cerrar" onclick="cerrarModal('modal-carrito')">&times;</span>
-            <h2 class="titulo-modal">TU CARRITO</h2>
+            <h2 class="titulo-modal" style="text-align: center; letter-spacing: 2px; font-size: 16px; margin-bottom: 15px;">TU CARRITO</h2>
             
             <ul id="lista-carrito" style="list-style: none; padding: 0;"></ul>
 
             <div id="carrito-footer">
-                <p class="total">TOTAL: $<span id="total-precio">0</span></p>
+                <p class="total" style="font-weight: bold; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; text-align: right;">
+                    TOTAL: $<span id="total-precio">0</span>
+                </p>
                 <button class="btn-whatsapp-final" onclick="finalizarCompra()">FINALIZAR POR WHATSAPP</button>
                 <button class="btn-vaciar" onclick="vaciarCarrito()">VACIAR CARRITO</button>
             </div>
@@ -57,13 +60,13 @@
     <div id="modal-legales" class="modal">
         <div class="modal-contenido-legal">
             <span class="cerrar" onclick="cerrarModal('modal-legales')">&times;</span>
-            <h2 class="titulo-legal">Términos y Condiciones</h2>
-            <div class="texto-legal">
+            <h2 class="titulo-legal" style="letter-spacing: 1px; font-size: 14px; margin-bottom: 10px;">Términos y Condiciones</h2>
+            <div class="texto-legal" style="font-size: 12px; line-height: 1.6; color: #666;">
                 <p><strong>1. Pedidos:</strong> Catálogo digital. La compra se finaliza vía WhatsApp.</p>
                 <p><strong>2. Envíos:</strong> Desde Córdoba Capital a todo el país.</p>
                 <p><strong>3. Cambios:</strong> 15 días con etiqueta y prenda original.</p>
             </div>
-            <button class="btn-entendido" onclick="cerrarModal('modal-legales')">ENTENDIDO</button>
+            <button class="btn-confirmar" style="margin-top: 15px; padding: 10px;" onclick="cerrarModal('modal-legales')">ENTENDIDO</button>
         </div>
     </div>
 
