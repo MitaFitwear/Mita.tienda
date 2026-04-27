@@ -17,7 +17,7 @@ const productos = [
     { id: 16, nombre: "Top sand", precio: 13800, imagenes: ["img/topsand.png", "img/topsanddetalles.png"], tela: "Modal y algodón.", talles: ["único"] },
     { id: 17, nombre: "Manga corta ink", precio: 13520, imagenes: ["img/mangacortaink.png", "img/mangacortainkdetalles.png"], tela: "Modal y algodón. Cuello redondo.", talles: ["talle único"] },
     { id: 18, nombre: "Manga corta nude", precio: 13520, imagenes: ["img/mangacortanude.png", "img/mangacortanudedetalles.png"], tela: "Modal y algodón. Cuello redondo.", talles: ["talle único"] },
-    { id: 19, nombre: "Buzo Reset grey", precio: 17589, imagenes: ["img/buzolanillagris.png", "buzolanilladetalles.png"], tela: "Lanilla soft.", talles: ["4"] },
+    { id: 19, nombre: "Buzo Reset grey", precio: 17589, imagenes: ["img/buzolanillagris.png", "img/buzolanilladetalles.png"], tela: "Lanilla soft.", talles: ["4"] },
     { id: 20, nombre: "Buzo Pi grey", precio: 18292, imagenes: ["img/buzodarlongris.png", "img/buzodarlondetalles.png"], tela: "Darlon.", talles: ["4"] },
     { id: 21, nombre: "Buzo Pi black", precio: 18292, imagenes: ["img/buzodarlonnegro.png", "img/buzodarlondetalles.png"], tela: "Darlon.", talles: ["3", "4"] },
     { id: 22, nombre: "Manga larga Poli", precio: 14892, imagenes: ["img/morleyrosa.png", "img/morleydetalles.png"], tela: "Morley. Cuello redondo.", talles: ["4"] }, 
