@@ -2,9 +2,9 @@ const productos = [
     { id: 1, nombre: "Short lycra Aura", precio: 13200, imagenes: ["img/shortlycra.png", "img/shortlycradetalles.png"], tela: "Lycra costura reforzada.", talles: ["2", "3", "4"] },
     { id: 2, nombre: "Catsuit Hero", precio: 21800, imagenes: ["img/catsuit.png", "img/catsuitdetalles.png"], tela: "Lycra.", talles: ["S", "L"] },
     { id: 3, nombre: "Calza Recta Linear", precio: 17690, imagenes: ["img/calzarectalinear.png", "img/calzarectalineardetalles.png"], tela: "Lycra costura reforzada.", talles: ["2", "3","4"] },
-    { id: 4, nombre: "Buzo Reset Beige", precio: 17589, imagenes: ["img/buzoresetbeige.png", "img/buzoresetdetalles.png"], tela: "Lanilla soft.", talles: [3] },
+    { id: 4, nombre: "Buzo Reset Beige", precio: 17589, imagenes: ["img/buzoresetbeige.png", "img/buzolanilladetalles.png"], tela: "Lanilla soft.", talles: ["3", "4"] },
     { id: 5, nombre: "Térmica black", precio: 14868, imagenes: ["img/termicablack.png", "img/termicadetalles.png"], tela: "Algodón. Cuello redondo.", talles: ["2"] },
-    { id: 6, nombre: "Buzo Reset Black", precio: 17589, imagenes: ["img/buzoresetblack.png", "img/buzoresetdetalles.png"], tela: "Lanilla soft.", talles: ["3"] },
+    { id: 6, nombre: "Buzo Reset Black", precio: 17589, imagenes: ["img/buzoresetblack.png", "img/buzolanilladetalles.png"], tela: "Lanilla soft.", talles: ["3", "4"] },
     { id: 7, nombre: "Palazzo Nan", precio: 26320, imagenes: ["img/pantalonNan.png", "img/pantalonNandetalles.png"], tela: "Algodón frizado.", talles: ["L"] },
     { id: 8, nombre: "Short Pollera Pulse", precio: 17569, imagenes: ["img/shortpollerapulse.png", "img/shortpolleradetalles.png"], tela: "Lycra costura reforzada.", talles: ["1", "2"] },
     { id: 9, nombre: "Top Ju", precio: 13248, imagenes: ["img/topJu.png", "img/topJudetalles.png"], tela: "Lycra.", talles: ["1", "5"] },
@@ -16,7 +16,12 @@ const productos = [
     { id: 15, nombre: "Pantalón c/puño White", precio: 26320, imagenes: ["img/pantalonpuñowhite.png", "img/pantalonpuñodetalles.png"], tela: "Rustico frizado.", talles: ["único"] },
     { id: 16, nombre: "Top sand", precio: 13800, imagenes: ["img/topsand.png", "img/topsanddetalles.png"], tela: "Modal y algodón.", talles: ["único"] },
     { id: 17, nombre: "Manga corta ink", precio: 13520, imagenes: ["img/mangacortaink.png", "img/mangacortainkdetalles.png"], tela: "Modal y algodón. Cuello redondo.", talles: ["talle único"] },
-    { id: 18, nombre: "Manga corta nude", precio: 13520, imagenes: ["img/mangacortanude.png", "img/mangacortanudedetalles.png"], tela: "Modal y algodón. Cuello redondo.", talles: ["talle único"] }
+    { id: 18, nombre: "Manga corta nude", precio: 13520, imagenes: ["img/mangacortanude.png", "img/mangacortanudedetalles.png"], tela: "Modal y algodón. Cuello redondo.", talles: ["talle único"] },
+    { id: 19, nombre: "Buzo Reset grey", precio: 17589, imagenes: ["img/buzolanillagris.png", "buzolanilladetalles.png"], tela: "Lanilla soft.", talles: ["4"] },
+    { id: 20, nombre: "Buzo Pi grey", precio: 18292, imagenes: ["img/buzodarlongris.png", "img/buzodarlondetalles.png"], tela: "Darlon.", talles: ["4"] },
+    { id: 21, nombre: "Buzo Pi black", precio: 18292, imagenes: ["img/buzodarlonnegro.png", "img/buzodarlondetalles.png"], tela: "Darlon.", talles: ["3", "4"] },
+    { id: 22, nombre: "Manga larga Poli", precio: 14892, imagenes: ["img/morleyrosa.png", "img/morleydetalles.png"], tela: "Morley. Cuello redondo.", talles: ["4"] }, 
+    { id: 23, nombre: "Manga larga Poli black", precio: 14892, imagenes: ["img/morleynegra.png", "img/morleydetalles.png"], tela: "Morley. Cuello redondo.", talles: ["4"] },
 ];
 
 let carrito = [];
