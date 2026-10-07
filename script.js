@@ -13,8 +13,7 @@ const productos = [
     { id: 14, nombre: "Palazzo storm", precio: 17560, imagenes: ["img/palazzostorm.png", "img/palazzostormdetalles.png"], tela: "Waffle frizado.", talles: ["talle único"] },
     { id: 15, nombre: "Pantalón c/puño White", precio: 26320, imagenes: ["img/pantalonpuñowhite.png", "img/pantalonpuñodetalles.png"], tela: "Rustico frizado.", talles: ["único"] },
     { id: 16, nombre: "Top sand", precio: 13800, imagenes: ["img/topsand.png", "img/topsanddetalles.png"], tela: "Modal y algodón.", talles: ["único"] },
-    { id: 17, nombre: "Buzo Pi black", precio: 18292, imagenes: ["img/buzodarlonnegro.png", "img/buzodarlondetalles.png"], tela: "Darlon.", talles: ["3", "4"] }
-];
+    { id: 17, nombre: "Buzo Pi black", precio: 18292, imagenes: ["img/buzodarlonnegro.png", "img/buzodarlondetalles.png"], tela: "Darlon.", talles: ["3", "4"]];
 
 let carrito = [];
 let talleSeleccionado = "";
